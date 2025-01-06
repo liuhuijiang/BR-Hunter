@@ -1,7 +1,6 @@
 # BR-Hunter
 
-The code and dataset for the paper "BR-Hunter: Detect Information Types of Bug Reports from Online Community Discussions", implemented in Pytorch. The method named BR-Hunter, which comprises the following four components. Specifically,the data preprocessing component disentangles and denoises the live chats, while the utterance embedding component aims to extract the semantic features of each utterance in the conversation. The bug report identification component then models the conversation as
-a feature graph and uses GAT and GNN_FiLm to identify conversations containing bug reports. Finally, the bug report synthesis component classifying and reassembling sentences in conversations containing bug report by fine-tuning BERT and prompt learning methods.
+The code and dataset for the paper "BR-Hunter: Detect Information Types of Bug Reports from Online Community Discussions", implemented in Pytorch.
 
 ## 1. Project Structure
 - `data/`
