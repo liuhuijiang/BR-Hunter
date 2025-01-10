@@ -18,7 +18,8 @@ The code is tested with Python 3.7. All dependencies are listed in [requirements
 
 ## 3. Data preparation
 The data is stored in the "data" folder. The training dataset should be named in the format of project name + "_train.json" and put it in the folder `data/train/`. 
-The testing dataset should be named in the format of project name + "_test.json" and put it in the folder `data/test/`.
+The testing dataset should be named in the format of project name + "_test.json" and put it in the folder `data/test/`. 
+In addition, you can also use the API provided by the real-time chat platform to obtain your own chat data.
 
 
 ## 4. Usage
@@ -44,7 +45,7 @@ Second, save the model
 torch.save(model.state_dict(), 'model_path.pth')
 ```
 
-3. Package into interface
+Third, Package into interface
 
 ```
 model.load_state_dict(torch.load('model_path.pth'))
@@ -57,7 +58,7 @@ def predict():
     # return prediction results
  ```
 
-4. Use the format corresponding to the API to call
+Finally, Use the format corresponding to the API to call
 
 ## Citation
 
