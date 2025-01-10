@@ -29,6 +29,36 @@ When your dataset is ready in the previous step, you can go to the "train.py" to
 python train.py
 ```
 
+## 5. Implementation guidance
+Finally, if you want to apply the trained model to actual scenarios, you need to choose a suitable deployment method to encapsulate the model into an API, such as Flask. A brief tutorial on using flask is as follows:
+
+First, install the necessary libraries.
+
+```
+pip install torch flask Pillow
+```
+
+Second, save the model
+
+```
+torch.save(model.state_dict(), 'model_path.pth')
+```
+
+3. Package into interface
+
+```
+model.load_state_dict(torch.load('model_path.pth'))
+app = Flask(__name__)
+@app.route('/predict', methods=['POST'])
+def predict():
+    # Preprocessing Input
+    output = model(input)
+    prediction = torch.argmax(output, dim=1)
+    # return prediction results
+ ```
+
+4. Use the format corresponding to the API to call
+
 ## Citation
 
 If you find the code useful, please cite our paper.
